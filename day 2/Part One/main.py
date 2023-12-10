@@ -1,7 +1,6 @@
 import re
 
 file = open('../input.txt', 'r')
-game_dict = {}
 pattern_game = r'(\d+)(?=:)'
 result = list(range(1, 101))
 
@@ -11,6 +10,7 @@ for line in file:
         game = matches[0]
         pattern = r'(\d+)\s(\w+)'
         matches = re.findall(pattern, line)
+        print(matches)
         for match in matches:
             digit = int(match[0])
             color = match[1]
