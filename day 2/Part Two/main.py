@@ -18,4 +18,5 @@ for line in file:
     for value in game_dict.values():
         aux_value *= value
     sum = sum + aux_value
+file.close()
 print("Sum of the power of sets:", sum)

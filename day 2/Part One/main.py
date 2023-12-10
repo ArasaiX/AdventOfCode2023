@@ -17,6 +17,7 @@ for line in file:
             if (color == 'red' and digit > 12) or (color == 'green' and digit > 13) or (color == 'blue' and digit > 14):
                 result.remove(int(game))
                 break
+file.close()
 print("Games:", result)
 print("Sum od IDs:", sum(result))
 
