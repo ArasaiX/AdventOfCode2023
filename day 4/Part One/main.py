@@ -1,4 +1,3 @@
-
 def check_points(line):
     line = line.split(': ')
     winner_column, play_column = line[1].split(' |')
@@ -21,11 +20,12 @@ def check_points(line):
                 points *= 2
     return points
 
-file = open("../input.txt", "r")
-result = []
-for line in file:
-    points = 0
-    points = check_points(line)
-    result.append(points)
-file.close()
-print("The sum of points are: ", sum(result))
+try:
+    with open("../input.txt", "r") as file:
+        result = []
+        for line in file:
+            points = check_points(line)
+            result.append(points)
+    print("The sum of points are: ", sum(result))
+except FileNotFoundError:
+    print("File not found.")
